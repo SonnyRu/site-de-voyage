@@ -374,3 +374,152 @@ footer {
     padding: 10px 0;
     color: #fff;
 }
+
+
+
+
+/*  #####################
+        Responsive 
+    #####################
+*/
+
+@media (max-width:784px) {
+    #container {
+        padding: 5px 20px;
+    }
+
+    header .logo p {
+        font-size: 30px;
+    }
+
+    header .menu {
+        display: none;
+    }
+
+    header .menu-toggle {
+        border: 2px solid #fff;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    header .menu-toggle::before {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(-10px);
+        box-shadow: 0 10px #fff;
+        transition: 0.2s;
+    }
+
+    header .menu li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 500ms ease;
+}
+
+header .menu li a:hover:after {
+    width: 100%;
+}
+
+    header .menu-toggle.active::before {
+        transform: translate(0) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+
+    header .menu-toggle::after {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    header .menu-toggle.active::after {
+        transform: translate(0) rotate(-45deg);
+    }
+
+    header .menu.responsive {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 100px;
+        height: fit-content;
+        width: 200px;
+    }
+
+    header .menu.responsive li {
+        text-align: right;
+        text-decoration: 0;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        border: 2px solid #fff;
+        border-radius: 6px;
+        transition: 0.5s;
+    }
+
+    .container-text h1 {
+        font-size: 35px;
+    }
+
+    .container-text p {
+        font-size: 15px;
+    }
+
+    #a-propos {
+        padding: 20px;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .description {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .description .desc {
+        width: 100%;
+    }
+
+    .description img {
+        width: 70%;
+        height: 350px;
+        margin: 20px auto;
+    }
+
+    #gallerie {
+        height: fit-content;
+    }
+
+    .liste-photos {
+        flex-direction: column;
+        margin: 25px auto;
+        height: auto;
+        padding: 0;
+        width: 80%;
+    }
+
+    .liste-photos .gallerie-img {
+        width: 100%;
+    }
+
+    #contact .image-contact {
+        display: none;
+    }
+}
