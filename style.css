@@ -468,10 +468,19 @@ header .menu li a:hover:after {
         text-align: right;
         text-decoration: 0;
         text-transform: uppercase;
-        padding: 10px 30px;
+        padding: 4px 57px;
         border: 2px solid #fff;
         border-radius: 6px;
         transition: 0.5s;
+        margin: 0.2rem;
+    }
+
+    header .menu.responsive li:hover {
+        background-color: #fff;
+    }
+
+    header .menu.responsive li a:hover {
+        color: #675afe;
     }
 
     .container-text h1 {
